@@ -1,4 +1,4 @@
-package hw9.tests;
+package hw9;
 
 import java.util.HashSet;
 

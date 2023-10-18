@@ -1,9 +1,6 @@
 package hw9.tests;
 
-import hw9.MyArrayList;
-import hw9.MyLinkedList;
-import hw9.MyQueue;
-import hw9.MyStack;
+import hw9.*;
 
 public class CollectionsTest {
 
