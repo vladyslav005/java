@@ -19,12 +19,12 @@ public class CollectionsTest {
 
 
 
+
         System.out.println(arr);
 
 
 
 
-        System.out.println(arr.get("c"));
 
 
 

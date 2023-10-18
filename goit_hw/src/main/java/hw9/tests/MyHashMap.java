@@ -8,15 +8,13 @@ public class MyHashMap<K, T> {
     private Node last = null;
     int length = 0;
 
-    private HashSet<K> keys = new HashSet<>();
-
 
 
     public void put(K key, T value) {
         if (first == null) {
             first = new Node(null, null, key, value);
             last = first;
-        } else if ( !keys.contains(key) ) {
+        } else if ( !isKeyUsed(key) ) {
             Node toAdd = new Node(null, last, key, value);
             last.next = toAdd;
             last = toAdd;
@@ -25,10 +23,20 @@ public class MyHashMap<K, T> {
             return;
         }
 
-        keys.add(key);
         length++;
     }
 
+
+    private boolean isKeyUsed(K key) {
+        Node curr = first;
+        while (curr != null) {
+            if (curr.key.equals(key))
+                return true;
+            curr = curr.next;
+        }
+
+        return false;
+    }
 
     public void remove(K key) {
         Node curr = first;
