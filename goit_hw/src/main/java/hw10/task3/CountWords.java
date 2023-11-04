@@ -1,4 +1,4 @@
-package hw10.taks3;
+package hw10.task3;
 
 import java.io.FileInputStream;
 import java.io.IOException;
