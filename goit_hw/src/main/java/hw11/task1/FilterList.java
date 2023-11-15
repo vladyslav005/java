@@ -14,13 +14,11 @@ public class FilterList {
     public String oddIndexesOnly (List<?> list) {
         StringBuilder stringBuilder = new StringBuilder();
 
-        list.stream()
+        return list.stream()
                 .filter(x ->  list.indexOf(x) % 2 != 1)
-                .forEach(x -> {
-                    var i = list.indexOf(x);
-                    stringBuilder.append((i+1) + ". " + list.get(i)+ ", ");
-                });
+                .map(x -> {
+                    return (list.indexOf(x)+1) + ". " + x;
+                }).toList().toString();
 
-        return stringBuilder.toString().substring(0, stringBuilder.length() - 2);
     }
 }
