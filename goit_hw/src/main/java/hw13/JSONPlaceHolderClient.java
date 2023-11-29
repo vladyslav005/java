@@ -19,10 +19,10 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-public class JSONPlaceHolder {
+public class JSONPlaceHolderClient {
 
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
-        JSONPlaceHolder communication = new JSONPlaceHolder();
+        JSONPlaceHolderClient communication = new JSONPlaceHolderClient();
 
         Geo geo = new Geo("0.0", "1.11");
         Address address = new Address("Bernolakova", "10", "Bratislava", "333", geo);
@@ -33,7 +33,7 @@ public class JSONPlaceHolder {
                 "vlad.com", company);
         communication.addUser(userToAdd);
 
-//        communication.getAllUsers();
+//        communication.getAllUsers();nt
 
 
 
