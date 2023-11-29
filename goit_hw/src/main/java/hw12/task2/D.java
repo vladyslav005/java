@@ -29,14 +29,8 @@ public class D {
             Thread a = new Thread(() -> {if (curr % 3 == 0 && curr % 5 != 0 && !processed.get()) {output.add("fizz"); processed.set(true);}});
             Thread b = new Thread(() -> {if (curr % 5 == 0 && curr % 3 != 0 && !processed.get()) {output.add("buzz"); processed.set(true);}});
             Thread c = new Thread(() -> {if (curr % 5 == 0 && curr % 3 == 0 && !processed.get()) {output.add("fizzbuzz"); processed.set(true);}});
-            a.start();
-            b.start();
-            c.start();
-
-            a.join();
-            b.join();
-            c.join();
-
+            a.start(); b.start(); c.start();
+            a.join(); b.join(); c.join();
             if (!processed.get()) output.add(String.valueOf(curr));
             processed.set(false);
             number();
